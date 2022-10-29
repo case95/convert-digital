@@ -1,8 +1,9 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { postToShopify, mapProductData } from "../../../utils";
+import { postToShopify, mapProductData } from "utils";
 
 const queryProduct = async (productId: string) => {
   const data = await postToShopify({
+    // Looks for an product image src & alt text, id, title, description, price amount & currency
     query: `{
       product(id: "${productId}") {
         images(first: 1) {

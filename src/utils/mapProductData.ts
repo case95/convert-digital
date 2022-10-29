@@ -1,4 +1,10 @@
-export const mapProductData = ({ product }) => {
+import { ShopifyProduct } from "models";
+
+export const mapProductData = ({
+  product,
+}: {
+  product: ShopifyProduct;
+}): Product => {
   return {
     id: product.id || null,
     title: product.title || null,
