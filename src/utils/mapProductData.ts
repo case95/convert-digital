@@ -6,7 +6,7 @@ export const mapProductData = ({
   product: ShopifyProduct;
 }): Product => {
   return {
-    id: product.id || null,
+    id: product.id,
     title: product.title || null,
     description: product.description || null,
     img: {

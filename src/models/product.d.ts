@@ -3,7 +3,6 @@ type WithNull<T> = {
 };
 
 interface BaseProduct {
-  id: string;
   title: string;
   description: string;
   price: string;
@@ -17,4 +16,7 @@ type BaseProductImage = WithNull<{
   src: string;
 }>;
 
-type Product = BaseProductWithNull & { img: BaseProductImage };
+type Product = BaseProductWithNull & {
+  id: string;
+  img: BaseProductImage;
+};
