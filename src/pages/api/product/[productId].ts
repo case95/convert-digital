@@ -1,6 +1,7 @@
-import { postToShopify, mapProductData } from "../../utils";
+import { NextApiRequest, NextApiResponse } from "next";
+import { postToShopify, mapProductData } from "../../../utils";
 
-const queryProduct = async (productId) => {
+const queryProduct = async (productId: string) => {
   const data = await postToShopify({
     query: `{
       product(id: "${productId}") {
@@ -32,10 +33,17 @@ const queryProduct = async (productId) => {
   return data;
 };
 
-export default async function handler(_req, res) {
-  const PRODUCT_ID = "gid://shopify/Product/6701794328741";
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   try {
-    const data = await queryProduct(PRODUCT_ID);
+    // Gets the product ID from the query params
+    const { productId } = req.query;
+    // Adds the shopify prefix
+    const shopifyProductId = `gid://shopify/Product/${productId}`;
+    // Fetches the product data from the Shopify Storefront API
+    const data = await queryProduct(shopifyProductId);
     // Remaps data to receive a cleaner object in FE
     const mappedData = mapProductData(data);
     res.status(200).json(mappedData);
