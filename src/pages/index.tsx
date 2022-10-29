@@ -1,3 +1,4 @@
+import { Product } from "components";
 import Head from "next/head";
 
 export default function Home({ product }) {
@@ -9,7 +10,7 @@ export default function Home({ product }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        {JSON.stringify(product, null, 2)}
+        <Product {...product} />
       </section>
     </div>
   );
