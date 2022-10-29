@@ -4,7 +4,7 @@ import "style/global.css";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <main>
+    <main className="flex flex-col justify-between min-h-screen">
       <Header />
       <Component {...pageProps} />
       <Footer />
