@@ -19,7 +19,6 @@ export const useCartStore = create<CartState>((set) => ({
       const productIndex = state.cart.findIndex(
         (product) => product.id === productId
       );
-      console.log({ productIndex });
 
       if (productIndex === -1) {
         return {

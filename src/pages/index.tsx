@@ -9,7 +9,7 @@ export default function Home({ product }) {
         <meta name="description" content={product.description} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <section className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
+      <section className="flex flex-col items-center justify-center w-full flex-1 px-20 ">
         <Product {...product} />
       </section>
     </div>
