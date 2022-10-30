@@ -3,7 +3,7 @@ import Head from "next/head";
 
 export default function Home({ product }) {
   return (
-    <div className="flex flex-col items-center justify-center py-2">
+    <div className="flex flex-col items-center justify-center py-2" id="main">
       <Head>
         <title>{product.title}</title>
         <meta name="description" content={product.description} />

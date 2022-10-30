@@ -8,7 +8,7 @@ const Product = (product: Product) => {
 
   return (
     <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center shadow-md border border-gray-200">
-      {product.img.src ? (
+      {product.img?.src ? (
         <img
           className="object-cover lg:col-span-2"
           src={product.img.src}
@@ -23,8 +23,8 @@ const Product = (product: Product) => {
       )}
       <div className="bg-gray-100 p-4 flex flex-col gap-4 h-full">
         <div>
-          <h3 className="text-lg font-bold">{product.title}</h3>
-          <span className="text-xs font-bold text-gray-500">
+          <h1 className="text-lg font-bold">{product.title}</h1>
+          <span className="text-xs font-bold text-gray-600">
             #{product.id.split("/").pop()}
           </span>
         </div>
