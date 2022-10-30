@@ -1,15 +1,18 @@
-# Next.js + Tailwind CSS Headless Challenge
+## Perequisites
 
-#### Your task is to displat a typical eCommerce product page from the provided store details found using the provided credentials with React Hooks, Tailwind CSS & SSR. Your solution will be judged based on the following things:
+- Install [Node](https://nodejs.dev/en/download/) v16.0.0
+- Rename .env.sample to .env
 
-- How your query the Shopify API
-- How your implement styling with TailwindCSS.
-- Components
-- Project structure
-- Code quality
+## Setup
 
-##### Notes:
+- Simply run `yarn` to install the dependecies
 
-- This project already has TailwindCSS configured for you.
-- Submission will require you to upload this on a personal public repository that you will share with your contact at Convert Digital via email.
-- Add to cart buttons are not expected to be functional.
+## Commands
+
+All the basic commands are run from the root of the project, from a terminal:
+
+| Command      | Action                                      |
+| :----------- | :------------------------------------------ |
+| `yarn`       | Installs dependencies                       |
+| `yarn dev`   | Starts local dev server at `localhost:3000` |
+| `yarn build` | Build your production site to `.next/`      |
